@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Note Detail{% endblock %}
+{% block content %}
+<h2>{{ note.title }}</h2>
+<p>{{ note.content }}</p>
+{% if note.tag %}
+<p><strong>Tag:</strong> {{ note.tag }}</p>
+{% endif %}
+<a href="{{ url_for('index') }}" class="btn btn-primary">Back</a>
+{% endblock %}
